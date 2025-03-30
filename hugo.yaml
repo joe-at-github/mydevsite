@@ -1,3 +1,88 @@
 baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+languageCode: en
+# title: Joe Lamy
+theme: ["PaperMod"]
+
+mainsections: ["posts"]
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Home
+          url: index.html
+          weight: 5
+        - name: Posts
+          url: posts/
+          weight: 10
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  # author: Theme PaperMod
+  # author: ["Me", "You"] # multiple authors
+
+  # defaultTheme: auto
+  # disableThemeToggle: true
+  # ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  # displayFullLangName: true
+  # ShowPostNavLinks: true
+  # ShowBreadCrumbs: true
+  # ShowCodeCopyButtons: true
+  # ShowRssButtonInSectionTermList: true
+  # ShowAllPagesInArchive: true
+  # ShowPageNums: true
+  # ShowToc: true
+  # comments: false
+  images: ["images/papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: "#"
+    imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "👋 Hi, I am Joe"
+    Content: >
+      - I am a software engineer based in Copenhagen, DK.
+
+      - I’m passionate about learning, sharing knowledge, and connecting with others.
+
+      - In 2018, I transitioned from sales to web development, following my passion for technology.
+
+      - Currently, I work as a Solutions Architect at Homeflow.
+
+  socialIcons:
+    - name: github
+      title: Checkout my github
+      url: "https://github.com/joe-at-github"
+    - name: Linkedin
+      title: Connect with me on Linkedin
+      url: "https://linkedin.com/in/joe-lamy"
+
+  editPost:
+    URL: "https://github.com/joe-at-github/mydevsite/tree/main/content/"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
